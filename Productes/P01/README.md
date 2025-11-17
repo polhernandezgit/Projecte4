@@ -1,4 +1,4 @@
-P01: GitHub. Treballant de forma col·laborativa: forks i pull request.
+# P01: GitHub. Treballant de forma col·laborativa: forks i pull request.
 
 Molt bona feina, equip.
 Ara que dominem les eines de manera individual (servidors, permisos, etc.), és hora d'aprendre a treballar com ho fem realment a EverPia: com un equip coordinat.
