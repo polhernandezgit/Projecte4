@@ -107,4 +107,7 @@ Un conjunt de productes que constitueixen una carpeta de treball professional, l
 
 ## Acces a tasques i productes.
 
+[Tasques](./Tasques)
+
+[Productes](./Productes)
 
