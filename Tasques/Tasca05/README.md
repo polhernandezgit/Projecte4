@@ -111,7 +111,6 @@ Tornem a la màquina windows per fer un ssh a la nostre ip per veure si ara ens 
 
 <img width="713" height="549" alt="image" src="https://github.com/user-attachments/assets/5541082a-c774-49a0-9f0d-111112e778f7" />
 
-
 ---
 
 
