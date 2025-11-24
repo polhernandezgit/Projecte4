@@ -22,7 +22,10 @@ hostname
 
 <img width="711" height="512" alt="image" src="https://github.com/user-attachments/assets/daa258ff-c8b1-4d43-87cd-2c10e723cdc0" />
 
+
 <img width="234" height="64" alt="image" src="https://github.com/user-attachments/assets/d0ca537e-e5d4-4d3f-850c-a02d2c6a81d4" />
+
+
 
 Abans d'entrar a l'arxiu de configuració haurem d'habilitar l'usuari a root en el Ubuntu, que simplement es ficar la nova contrasenya que vulguem, en el meu cas usuari.
 ``` bash
