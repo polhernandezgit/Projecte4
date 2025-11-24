@@ -53,9 +53,63 @@ Després farem un *login* en local amb **l'usuari root**.
 su - root
 ```
 
+<img width="219" height="47" alt="image" src="https://github.com/user-attachments/assets/2c34bd3f-4b24-4d43-a5d3-3d4c761607fb" />
+
+
 <img width="210" height="77" alt="image" src="https://github.com/user-attachments/assets/95c3f420-45c4-4c35-8d96-e85eb8133497" />
 
 ---
+
+Ara tornem a la màquina windows per intentar fer un *ssh root* i veurem que ens denega la contrasenya.
+
+<img width="436" height="77" alt="image" src="https://github.com/user-attachments/assets/4e8ad437-0d89-434d-a912-47e919b45c4d" />
+
+---
+
+Aqui haurem de generar alguns codis *RSA*. Nomes hem de donar enter fins que es completin.
+
+<img width="665" height="398" alt="image" src="https://github.com/user-attachments/assets/1beb2d31-107c-4107-a14f-b5c45d35899a" />
+
+---
+
+Despres mirarem si tenim els **arxius que necessitem** ( aixo nomes m'ha funcionat amb terminal ).
+
+<img width="609" height="247" alt="image" src="https://github.com/user-attachments/assets/5b141d02-c413-4ffc-889a-58cdf0d79357" />
+
+---
+
+I a continuació hem de copiar el .pub de la VM Ubuntu i copiarla al windows amb la següent comanda:
+``` bash
+scp .\.ssh\id_rsa.pub usuari@192.168.56.102:/home/usuari
+```
+
+<img width="951" height="79" alt="image" src="https://github.com/user-attachments/assets/67915f9d-8ea4-42c4-a0b8-05d4e8574040" />
+
+<img width="602" height="289" alt="image" src="https://github.com/user-attachments/assets/8c99c953-8657-4228-bfdb-71faad69b556" />
+
+---
+
+Tornarem a la màquina Ubuntu per crear el següent arxiu a dins de la carpeta ssh amb aquesta comanda.
+``` bash
+touch .ssh/authorized_keys
+```
+
+<img width="346" height="30" alt="image" src="https://github.com/user-attachments/assets/23e922f4-e0ef-4898-80f6-eb5cf49bad8a" />
+
+---
+
+Ara copiem la clau id_rsa.pub dins de l'arxiu que acabem de crear:
+``` bash
+cat id_rsa.pub >> .ssh/authorized_keys
+```
+
+<img width="444" height="30" alt="image" src="https://github.com/user-attachments/assets/2c27aea4-5775-422d-b54b-dd35f5be4b03" />
+
+---
+
+
+
+
 
 
 
