@@ -89,7 +89,7 @@ scp .\.ssh\id_rsa.pub usuari@192.168.56.102:/home/usuari
 
 ---
 
-Tornarem a la màquina Ubuntu per crear el següent arxiu a dins de la carpeta ssh amb aquesta comanda.
+Tornarem a la màquina Ubuntu per crear el següent arxiu **a dins de la carpeta ssh** amb aquesta comanda.
 ``` bash
 touch .ssh/authorized_keys
 ```
@@ -211,7 +211,7 @@ Hem de anar a panel de control, Redes e internet i a opciones de internet.
 
 ---
 
-En aquesta part hem de anar a conexiones, que surt en la part de adalt i donem a configuración de LAN, activem el servidor proxy, donem a opciones avanzadas i ho configurem.
+En aquesta part hem de anar a conexiones, que surt en la part de adalt i donem a configuración de LAN, activem el servidor proxy, donem a opciones avanzadas i ho configurem com en la captura.
 
 <img width="415" height="569" alt="image" src="https://github.com/user-attachments/assets/573b2084-45d1-4484-bbf2-dfe7f7db7005" />
 
@@ -220,6 +220,7 @@ En aquesta part hem de anar a conexiones, que surt en la part de adalt i donem a
 <img width="425" height="576" alt="image" src="https://github.com/user-attachments/assets/512270db-d721-45b6-9906-d20f9cc19b3c" />
 
 ---
+A continuacio instal·larem el wireshark en el windows per confirmar que tot el nostre servidor SSH funciona correctament. 
 
-
+<img width="1021" height="767" alt="image" src="https://github.com/user-attachments/assets/39181752-16a3-4bc9-bf33-b6e4e4ec5927" />
 
