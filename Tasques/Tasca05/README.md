@@ -68,11 +68,19 @@ Ara tornem a la màquina windows per intentar fer un *ssh root* i veurem que ens
 
 Aqui haurem de generar alguns codis *RSA*. Nomes hem de donar enter fins que es completin.
 
+``` bash
+ssh-keygen -t rsa
+```
+
 <img width="665" height="398" alt="image" src="https://github.com/user-attachments/assets/1beb2d31-107c-4107-a14f-b5c45d35899a" />
 
 ---
 
 Despres mirarem si tenim els **arxius que necessitem** ( aixo nomes m'ha funcionat amb terminal ).
+
+``` bash
+ls .\.ssh\
+```
 
 <img width="609" height="247" alt="image" src="https://github.com/user-attachments/assets/5b141d02-c413-4ffc-889a-58cdf0d79357" />
 
@@ -98,7 +106,7 @@ touch .ssh/authorized_keys
 
 ---
 
-Ara copiem la clau id_rsa.pub dins de l'arxiu que acabem de crear:
+Ara copiem la clau *id_rsa.pub* dins de l'arxiu que acabem de crear:
 ``` bash
 cat id_rsa.pub >> .ssh/authorized_keys
 ```
@@ -107,13 +115,13 @@ cat id_rsa.pub >> .ssh/authorized_keys
 
 ---
 
-Tornem a la màquina windows per fer un ssh a la nostre ip per veure si ara ens demana la nostra contrasenya.
+Tornem a la màquina windows per fer un **ssh a la nostre ip** per veure si ara ens demana la nostra contrasenya.
 
 <img width="713" height="549" alt="image" src="https://github.com/user-attachments/assets/5541082a-c774-49a0-9f0d-111112e778f7" />
 
 ---
 
-Després anem a la configuració de sistema i a caracteristiques opcionals per permitir que l'aplicació fagi canvis en el dispositiu.
+Després anem a la **configuració de sistema** i a **caracteristiques opcionals** per permitir que **l'aplicació fagi canvis en el dispositiu.**
 
 <img width="1017" height="735" alt="image" src="https://github.com/user-attachments/assets/6db1883e-1ead-4a92-9d8a-b0e0cb6462fe" />
 
@@ -123,20 +131,20 @@ Després anem a la configuració de sistema i a caracteristiques opcionals per p
 
 ---
 
-Un cop a qui dins donem a ver las caracteristiques disponibles.
+Un cop a qui dins donem a *ver las caracteristiques disponibles*.
 
 <img width="541" height="623" alt="image" src="https://github.com/user-attachments/assets/27b700f9-533b-4f5f-9d56-8afb19baa92f" />
 
 ---
 
-Buscarem el OpenSSH, marquem la casella i afegir.
+Buscarem el *OpenSSH*, marquem la casella i a afegir.
 
 <img width="540" height="623" alt="image" src="https://github.com/user-attachments/assets/b142c7f8-c91c-46a5-a088-ef03a4c1e09e" />
 
 ---
 
-En el següent pas, haurem d'apagar el firewall en el windows buscant firewall y proteccion de red.
-Després entrem a red pública i la desactivem.
+En el següent pas, **haurem d'apagar el firewall en el windows buscant firewall y proteccion de red**.
+Després entrem a *red pública* i la desactivem.
 
 <img width="793" height="629" alt="image" src="https://github.com/user-attachments/assets/8a715496-b06c-4813-a33c-1ac6023d0642" />
 
@@ -144,7 +152,7 @@ Després entrem a red pública i la desactivem.
 
 ---
 
-Ara tornem a entrar al pwershell pero aquest cop com a administradors i activem el ssh.
+Ara tornem a entrar al *powershell* però aquest cop com a **administradors** i activem el ssh.
 
 ``` bash
 Start-Service sshd
@@ -156,7 +164,7 @@ Start-Service sshd
 
 ---
 
-I fem que cada cop que iniciem la màquina, tambe s'encéngui el servei.
+I fem que cada cop que iniciem la màquina, **tambe s'encéngui el servei**.
 
 ``` bash
 Set-Service -Name sshd -StartupType "Automatic"
@@ -166,7 +174,7 @@ Set-Service -Name sshd -StartupType "Automatic"
 
 ---
 
-Després farem un ipconfig per veurela ip que te la interficie de hostonly, que la utilitzarem per conectar-nos en la màquina Ubuntu
+Després farem un *ipconfig* per veure la ip que te la **interficie de hostonly**, que la utilitzarem per **conectar-nos en la màquina Ubuntu**.
 
 ``` bash
 ipconfig
@@ -176,14 +184,14 @@ ipconfig
 
 ---
 
-Començarem connectan-nos remotament amb la màquina Ubuntu a la màquina windows de la següent manera:
-Primer farem un ping amb la ip de hostonly de la màquina windows per veure si les dos màquines es poden comunicar.
+Començarem **connectan-nos remotament amb la màquina Ubuntu a la màquina windows** de la següent manera:
+Primer farem un *ping* amb la ip de *hostonly* de la màquina windows per veure si **les dos màquines es poden comunicar**.
 
 <img width="505" height="97" alt="image" src="https://github.com/user-attachments/assets/1bcf8e05-de94-4683-9573-2794761dbeaa" />
 
 ---
 
-Com que la comprovació ens confirma que funciona bé, ens connectem a la màquina windows
+Com que la comprovació ens confirma que funciona bé, ens connectem a la màquina windows.
 
 ``` bash
 ssh usuari@192.168.56.103
@@ -192,7 +200,7 @@ ssh usuari@192.168.56.103
 <img width="340" height="35" alt="image" src="https://github.com/user-attachments/assets/17a0bb66-7c19-4d55-88e1-d55078eec7b8" />
 
 ## Creació d'un túnel.
-Tornarem al powershell de windows per començar a crear el túnel.
+Tornarem al *powershell* de windows per començar a crear el túnel.
 
 ``` bash
 ssh -D 9876 usuari@192.168.56.102
@@ -202,8 +210,8 @@ ssh -D 9876 usuari@192.168.56.102
 
 ---
 
-Ara configurarem el túnel amb proxy.
-Hem de anar a panel de control, Redes e internet i a opciones de internet.
+**Ara configurarem el túnel** amb *proxy*.
+Hem de anar a *panel de control, Redes e internet* i a *opciones de internet*.
 
 <img width="778" height="582" alt="image" src="https://github.com/user-attachments/assets/378216a4-c911-4437-ba09-c9b5503283b4" />
 
@@ -211,7 +219,7 @@ Hem de anar a panel de control, Redes e internet i a opciones de internet.
 
 ---
 
-En aquesta part hem de anar a conexiones, que surt en la part de adalt i donem a configuración de LAN, activem el servidor proxy, donem a opciones avanzadas i ho configurem com en la captura.
+En aquesta part hem de anar a *conexiones*, que surt en la part de adalt i **donem a configuración de LAN, activem el servidor proxy, donem a opciones avanzadas i ho configurem com en la captura**.
 
 <img width="415" height="569" alt="image" src="https://github.com/user-attachments/assets/573b2084-45d1-4484-bbf2-dfe7f7db7005" />
 
@@ -220,7 +228,7 @@ En aquesta part hem de anar a conexiones, que surt en la part de adalt i donem a
 <img width="425" height="576" alt="image" src="https://github.com/user-attachments/assets/512270db-d721-45b6-9906-d20f9cc19b3c" />
 
 ---
-A continuacio instal·larem el wireshark en el windows per confirmar que tot el nostre servidor SSH funciona correctament. 
+A continuacio instal·larem el *wireshark* **en el windows** per confirmar que tot el nostre servidor SSH funciona correctament. 
 
 <img width="1021" height="767" alt="image" src="https://github.com/user-attachments/assets/39181752-16a3-4bc9-bf33-b6e4e4ec5927" />
 
