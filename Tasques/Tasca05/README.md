@@ -228,7 +228,7 @@ En aquesta part hem de anar a *conexiones*, que surt en la part de adalt i **don
 <img width="425" height="576" alt="image" src="https://github.com/user-attachments/assets/512270db-d721-45b6-9906-d20f9cc19b3c" />
 
 ---
-A continuacio instal·larem el *wireshark* **en el windows** per confirmar que el tunel del nostre servidor SSH funciona correctament. 
+A continuacio instal·larem el *wireshark* **en el windows** per veure el tranait passa per el túnel. 
 
 <img width="1021" height="767" alt="image" src="https://github.com/user-attachments/assets/39181752-16a3-4bc9-bf33-b6e4e4ec5927" />
 
