@@ -232,3 +232,4 @@ A continuacio instal·larem el *wireshark* **en el windows** per veure el tranai
 
 <img width="1021" height="767" alt="image" src="https://github.com/user-attachments/assets/39181752-16a3-4bc9-bf33-b6e4e4ec5927" />
 
+<img width="1020" height="767" alt="image" src="https://github.com/user-attachments/assets/f8b31275-482a-44f2-8b46-c974f255a3b6" />
