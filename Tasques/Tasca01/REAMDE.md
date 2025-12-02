@@ -76,5 +76,55 @@ Quines dades es copien i amb quina freqüència (separant Servidor/Clients i cr�
 
 2) Cronograma Setmanal Detallat
 
+## FASE 3:
 
+## 1. Debat i selecció
+Cada parella presenta el seu esquema.  
+El grup debat els pros i contres (cost, temps de recuperació, seguretat, simplicitat).
+
+## 2. Disseny de la política final
+El grup redacta la política definitiva de còpies de seguretat per a l’empresa.
+
+---
+
+# Document final
+
+## 1) Dades objecte de còpia
+
+Les dades més importants del servidor són sobretot les **bases de dades dels clients**, perquè són importants per al funcionament de l’empresa i canvien contínuament. També són molt importants els **documents de projectes**, ja que inclouen plànols i especificacions necessàries per a la feina dels tècnics. Finalment, les **carpetes personals dels usuaris** també s’han de protegir, perquè contenen informació del treball diari. No cal fer còpia completa dels 10 equips clients, ja que gairebé tot el treball es guarda en un NAS.
+
+Les **bases de dades** s’han de copiar amb còpies incrementals cada 4 hores i una còpia completa setmanal, ja que són dades crítiques. Els **documents de projectes** tindran còpia diferencial diària i còpia completa setmanal. Les **carpetes personals** es copiaran cada nit amb còpies incrementals i una còpia completa setmanal.
+
+---
+
+## 2) Cronograma setmanal
+
+| Dia | Dades | Tipus de còpia | Mitjà |
+|-----|--------|----------------|------|
+| Dilluns | Base de dades | Incremental | NAS |
+| Dimarts | Base de dades | Incremental | NAS |
+| Dimecres | Base de dades | Incremental | NAS |
+| Dijous | Base de dades | Incremental | NAS |
+| Divendres | Base de dades | Incremental | NAS |
+| Dissabte | Documents projecte | Diferencial | NAS |
+| Diumenge | Tot el servidor | Completa | NAS + Cloud |
+
+---
+
+## 3) Elecció de mitjans i ubicació (Regla 3-2-1)
+
+### Mitjà 1 (Local)
+El mitjà de còpia local serà un NAS instal·lat a l’empresa. Servirà per fer còpies freqüents del servidor i permet una recuperació ràpida de les dades en cas d’error
+
+### Mitjà 2 (Extern)
+La còpia externa es farà al núvol (cloud) utilitzant un proveïdor de confiança com Google Cloud o Microsoft Azure.
+
+### Ubicació fora de lloc
+La còpia externa es guarda al núvol, en un lloc fora de l’empresa, perquè així les dades estan protegides encara que passi alguna cosa greu a les oficines, com un incendi o un robatori.
+
+---
+
+## 4) Estratègia de recuperació (RTO/RPO)
+
+Per assegurar que no es perden més de 4 hores d’informació de comptabilitat i clients, es fan còpies de seguretat cada 4 hores. Així, si hi ha algun problema, la informació recuperada sempre serà recent. També per garantir que les dades es puguin recuperar en menys de 4 hores, la còpia més recent es guarda al NAS de l’empresa, que permet restaurar les dades ràpidament sense necessitat d’esperar descàrregues del núvol.
 
