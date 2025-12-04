@@ -49,7 +49,7 @@ En l'ultima pestanya nomès donem a *submit*.
 <img width="1015" height="688" alt="image" src="https://github.com/user-attachments/assets/88124230-be32-4756-98ed-20b09a200277" />
 
 ---
-Ara farem un backup que anirà al Google Drive i que es farà cada dia a les 18:00 pm.
+Ara farem un backup que anirà al Google Drive i que es farà cada dia a les 18:00 pm. La configuració sera igual que el backup anterior.
 
 <img width="960" height="583" alt="image" src="https://github.com/user-attachments/assets/21ef7be3-6253-4828-a701-bbae13554328" />
 
