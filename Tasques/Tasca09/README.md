@@ -14,6 +14,27 @@ Tots dos equips els instal·larem seguint els requisits recomanats. L'idioma tri
 
 Ens assegurarem que ambdues màquines tinguin accés a Internet i que es puguin comunicar entre elles a través de la xarxa només-amb-amfitrió i actualitzarem els sistemes amb les últimes actualitzacions disponibles.
 
+<img width="599" height="289" alt="image" src="https://github.com/user-attachments/assets/f5fcad56-609b-49d8-8e37-5adfc3ef38a8" />
+
+<img width="600" height="298" alt="image" src="https://github.com/user-attachments/assets/2b0cb223-1a56-44f9-a5c6-9ac2c625fb07" />
+
+---
+Ficarem aquestes interficies en les dos màquines virtuals.
+
+<img width="864" height="494" alt="image" src="https://github.com/user-attachments/assets/cb6a41fd-a4dd-400a-8000-04eadbb892a5" />
+
+<img width="863" height="495" alt="image" src="https://github.com/user-attachments/assets/9ac7bd20-9b82-4301-99e8-d9125215d84f" />
+
+---
+Comprobarem si les màquines es poden comunicar.
+
+<img width="496" height="130" alt="image" src="https://github.com/user-attachments/assets/5fb08a9a-837c-4516-b78b-2623099bc0ac" />
+
+---
+Instal·larem el servidor NFS en la màquina Ubuntu i totes les dependencies.
+
+<img width="636" height="221" alt="image" src="https://github.com/user-attachments/assets/acbe9ee8-dff9-4271-93e8-ae06abd1589e" />
+
 ### Fase 2: Preparació del servidor
 Abans de compartir res, hem de preparar els usuaris i els directoris al Servidor.
 1. Creació de Grups: Crear dos grups per al client: devs i admins.
