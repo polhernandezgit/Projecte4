@@ -106,26 +106,32 @@ sudo chmod 770 admin_tools/ dev_projects/
 
 ### Farem el mateix en la màquina Zorin
 Primer haurem d'instal·lar l'aplicació de *users and groups*.
+
 <img width="897" height="556" alt="image" src="https://github.com/user-attachments/assets/3f12742e-cdf9-4a50-87cb-f713aaf00e62" />
 
 ---
 Quan obrim l'aplicació veurem que nomes tenim el nostre usuari, però per poder crear els usuaris i grups, hem de fer clic a gestionar grupos.
+
 <img width="740" height="427" alt="image" src="https://github.com/user-attachments/assets/6f2ae980-8bed-4031-b995-b5ed63aac06e" />
 
 ---
 Quan donem a gestionar grupos, cliquem a Añadir.
+
 <img width="735" height="423" alt="image" src="https://github.com/user-attachments/assets/97033f4d-24ef-4e78-ab79-8bf9874a9418" />
 
 ---
 Aqui fiquem el primer grup de *devs*.
+
 <img width="732" height="427" alt="image" src="https://github.com/user-attachments/assets/8ce5a45d-9f14-433f-802e-700415d78b72" />
 
 ---
 I el segon sera *admins*.
+
 <img width="734" height="428" alt="image" src="https://github.com/user-attachments/assets/6518fc6a-d07a-43d9-9ede-21780b9f7fab" />
 
 ---
 Un cop creats el grups, ara crearem els usuaris, per això tornem al menú principal i donem a *Añadir*
+
 <img width="735" height="430" alt="image" src="https://github.com/user-attachments/assets/efe68a8d-f03e-4a3e-ab64-6a6e7b8be03a" />
 
 ---
