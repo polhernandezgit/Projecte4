@@ -116,18 +116,3 @@ Un conjunt de productes que constitueixen una carpeta de treball professional, l
 [Tasques](./Tasques)
 
 [Productes](./Productes)
-
-## Tasques
-
-[Tasca01](./Tasca01)
-[Tasca02](./Tasca02)
-
-
-
-
-
-
-
-
-
-## Productes
