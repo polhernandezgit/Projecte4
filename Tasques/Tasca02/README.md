@@ -10,6 +10,11 @@ Hem de tenir creats dos discos de minim 10 GB, un serà el que ja ve creat amb l
 <img width="865" height="493" alt="image" src="https://github.com/user-attachments/assets/9a889f04-3581-449e-83cd-6b53f767e40b" />
 
 ---
+Quan haguem entrat a la màquina, el primer que hem de fer es anar al administrador de discos per crear un nou volum simple.
+
+<img width="749" height="594" alt="image" src="https://github.com/user-attachments/assets/2287514c-d946-4d0c-9958-bafabed8e2f9" />
+
+---
 Haurem de anar al Google Drive per fer tota aquesta simulació.
 
 <img width="1021" height="768" alt="image" src="https://github.com/user-attachments/assets/3f4b0244-b743-4dce-856d-9914dd9e79c6" />
@@ -18,6 +23,11 @@ Haurem de anar al Google Drive per fer tota aquesta simulació.
 Ara instal·laré el *Duplicati*.
 
 <img width="1021" height="766" alt="image" src="https://github.com/user-attachments/assets/7a3a3edf-4e39-442b-9d74-4d11f82868e2" />
+
+---
+Crearem alguns documents temporals per fer les copies de seguretat.
+
+<img width="778" height="584" alt="image" src="https://github.com/user-attachments/assets/192abf21-7264-4381-baa1-24294c74df06" />
 
 ---
 I començarem a crears les còpies de seguretat.
@@ -31,11 +41,12 @@ I començarem a crears les còpies de seguretat.
 <img width="1015" height="692" alt="image" src="https://github.com/user-attachments/assets/9098b171-b984-479d-965a-9a0eb763fd27" />
 
 ---
-Seleccionarem el disc secundari i la carpeta que vulguem copiar.
+Seleccionarem el disc secundari i la carpeta hon tenim els documents.
 
 <img width="1013" height="688" alt="image" src="https://github.com/user-attachments/assets/636aba38-907d-4fde-aa33-2c4c548e68e3" />
 
-<img width="1015" height="687" alt="image" src="https://github.com/user-attachments/assets/c35fd19b-306f-464d-8b16-47983383beb4" />
+<img width="949" height="683" alt="image" src="https://github.com/user-attachments/assets/04d0c086-e443-4abc-bfd2-834f13d4fc6b" />
+
 
 
 ---
@@ -49,15 +60,36 @@ En l'ultima pestanya nomès donem a *submit*.
 <img width="1015" height="688" alt="image" src="https://github.com/user-attachments/assets/88124230-be32-4756-98ed-20b09a200277" />
 
 ---
-Ara farem un backup que anirà al Google Drive i que es farà cada dia a les 18:00 pm. La configuració sera igual que el backup anterior.
+Ara farem un backup que anirà al Google Drive, que en aquest cas hem de fer clic hon diu AuthID per vincular el nostre compte i que es farà cada dia a les 18:00 pm. La configuració sera igual que el backup anterior.
+
+<img width="954" height="634" alt="image" src="https://github.com/user-attachments/assets/e928a566-c585-425c-b574-174ed1925570" />
 
 <img width="960" height="583" alt="image" src="https://github.com/user-attachments/assets/21ef7be3-6253-4828-a701-bbae13554328" />
 
 <img width="459" height="407" alt="image" src="https://github.com/user-attachments/assets/9229d9d9-491f-4269-a8aa-7732595158a4" />
 
 ---
-Ara passarem a fer les restauracions.
+Ara passarem a fer les restauracions. Per això hem de borrar els documents de prova que hem creat avans, per després anar a duplicati, donar a *restores* i *start*
 
+<img width="780" height="588" alt="image" src="https://github.com/user-attachments/assets/5a71820e-1e62-448b-b273-da4845710494" />
+
+<img width="1021" height="768" alt="image" src="https://github.com/user-attachments/assets/1a0feb5b-d2d7-4377-8cb6-7d100cf8086f" />
+
+---
+Aquì elegima la carpeta que volem recupera, en el meu cas és **Còpia de seguretat**.
+
+<img width="947" height="634" alt="image" src="https://github.com/user-attachments/assets/36a0064a-a923-4ae0-bded-3fca8aba86bb" />
+
+---
+Escollim el fitxer que volem restaurar, que sera documents.
+
+<img width="559" height="370" alt="image" src="https://github.com/user-attachments/assets/be52de9b-2f76-4f93-bd89-262672ecb4df" />
+
+<img width="782" height="590" alt="image" src="https://github.com/user-attachments/assets/d7049a53-9527-457d-808b-e3f9d61f044c" />
+
+I ja ho tindrem recuperat.
+---
+Per la còpia de seguretat del Google Drive el que haurem de fer serà exactament el mateix però nomes tindrem que elegir l'altre còpia.
 ## Part 2: Còpia seguretat servidor Linux
 Primer hem de crear el disc secundari de 10 GB.
 
