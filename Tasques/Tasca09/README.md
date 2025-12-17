@@ -1,4 +1,4 @@
-# T09: Servidor fitxers Linux. NFS (tasca individual)
+ # T09: Servidor fitxers Linux. NFS (tasca individual)
 ## El Cas Client: DevOptimize Solutions
 El nostre client, DevOptimize Solutions, és una petita startup de desenvolupament de programari que treballa exclusivament amb Linux. Tenen un problema crític: el seu codi font i els seus actius (documents de disseny, scripts) estan descontrolats. Cada desenvolupador té còpies locals, cosa que provoca errors de versió constants i una pèrdua d'eficiència brutal. Ens han contractat per implementar un servidor de fitxers centralitzat. Atès que tot l'entorn és Linux, la solució nativa, més ràpida i eficient del sector és NFS (Network File System). El client ha insistit en que treballa sense un entorn d’autenticació centralitzada i que, de moment, no té previst fer aquest pas.
 
@@ -305,10 +305,54 @@ ls -l /mnt/admin_tools
 Tornem a editar el arxiu exports borrant la segona línia i afegint les dos noves que surt en la imatge.
 <img width="726" height="247" alt="image" src="https://github.com/user-attachments/assets/892fd958-334c-456b-94bd-ff9107fe1a8f" />
 
+---
+### 2. Des del client, muntar el recurs compartit a /mnt/dev_projects i provar d'escriure-hi com a usuari dev01. Hauria de funcionar.
 
+Primer hem de muntar el recurs de dev_projects a la màquina client.
+```
+sudo mkdir /mnt/dev_projects
+```
+<img width="452" height="35" alt="image" src="https://github.com/user-attachments/assets/70ffa06d-238d-4083-a666-66fa64d82dff" />
 
+---
+Ara modificarem la xarxa des de *enp0s8* i probarem amb la següent ip.
 
+<img width="641" height="399" alt="image" src="https://github.com/user-attachments/assets/370ae86e-699b-4982-981c-39aadfb2c67c" />
 
+---
+Ara muntem els recursos, primer farem la ip.
+```
+sudo mount 192.168.56.101:/srv/nfs/dev_projects /mnt/dev_projects
+```
+<img width="642" height="52" alt="image" src="https://github.com/user-attachments/assets/def9afdf-dfcd-4c4b-a18e-fa71c936d990" />
+
+---
+Iniciem sessió amb l'usuari dev01
+
+<img width="594" height="392" alt="image" src="https://github.com/user-attachments/assets/be3db09c-70f8-40bd-bb36-c7b36d6762b2" />
+
+---
+Entrem a dins de la carpeta creada.
+```
+cd /mnt/dev_projects
+```
+<img width="377" height="35" alt="image" src="https://github.com/user-attachments/assets/a215edd5-f0de-4f05-a0d5-d883504f460d" />
+
+---
+Ara crearem el arxiu de prova en la carpeta i ls per comprovar que s'hagi creat.
+```
+touch file03
+ls
+```
+<img width="441" height="50" alt="image" src="https://github.com/user-attachments/assets/6fb9784b-89ac-4145-8ae3-64ce258de746" />
+
+### 3. Desmuntar el recurs i canviar manualment la IP del client a 192.168.56.100. Tornar a provar d'escriure al directori muntat com a usuari dev01 i comprovar que només funciona la lectura.
+Tornem a entrar a la configuració de la xarxa i canviem la ip de manera que estigui a dins del rang que diu el enunciat.
+
+<img width="642" height="399" alt="image" src="https://github.com/user-attachments/assets/d8049fb2-9b7b-4858-84d0-ec703f4c30d3" />
+
+### 4. Canvieu d'usuari al client a admin01 i torneu a provar d'escriure al directori muntat. Comproveu que no es pot escriure, ja que admin01 no és membre del grup devs (permisos locals del sistema de fitxers).
+Iniciem sessió amb admin01 per probar de crear un arxiu dins la carpeta i veure que no ens deixa.
 
 
 
