@@ -226,38 +226,46 @@ sudo nano /etc/exports
 
 ### 2. Des del client, muntar aquest recurs compartit a /mnt/admin_tools. Com a root del client, intentar crear un fitxer dins d'aquest directori muntat.
 Primer crearem la carpeta
+
 <img width="446" height="31" alt="image" src="https://github.com/user-attachments/assets/27bb89c9-797a-4c1b-8551-c7d03bedf153" />
 
 ---
 Ara muntarem els recursos.
+
 <img width="788" height="22" alt="image" src="https://github.com/user-attachments/assets/901df788-5212-44ae-9b58-46f5bec95b4d" />
 
 ---
 Después d'això intentarem crear un arxiu a dins d'aqueta carpeta, per això anire als arixus de la màquina i entrarem a la carpteta *mnt*.
+
 <img width="878" height="539" alt="image" src="https://github.com/user-attachments/assets/1c590917-447a-4570-9ddc-f3cc28e898c8" />
 
 ---
 Ara entrarem a la carpeta creada ficant la contrasenya de la màquina.
+
 <img width="881" height="540" alt="image" src="https://github.com/user-attachments/assets/9f448162-5780-4953-a5db-c5249dd15da4" />
 
 ---
 I com podem veure no ens deixa veure el seu contingut
+
 <img width="880" height="541" alt="image" src="https://github.com/user-attachments/assets/91f7b2d3-06ac-4d7d-b240-7d56ee977b41" />
 
 ### 3. Verificar quin és el propietari del fitxer creat. Per què? Justificar la resposta amb l'explicació tècnica de 'root_squash'.
 El motiu per el que no ens deixa entrar a la carpeta es perquè no tenim permisos ni el *root_squash*, que el que passa és que el root de la màquina client no es el mateix que el de la màquina Ubuntu ( això ho solucionarem a l'activitat *Prova 2* ).
 
 Avans el que farem és veure com el usuari Admin si ens deixa entrar en aqueslla carpeta. Primer iniciem sessió amb el usuari admin01.
+
 <img width="608" height="395" alt="image" src="https://github.com/user-attachments/assets/ded2c303-59f7-44c8-ae6b-7c3ce6cb92ea" />
 
 ---
 Intentem crear en la carpeta i podem vuere com si ens deixa, a més, fem un *ls* més la ruta de la carpeta per veure que s'ha creat.
+
 <img width="465" height="53" alt="image" src="https://github.com/user-attachments/assets/f1848143-6d79-4022-9327-15f6ecea871e" />
 
 ---
 ### Prova 2 (La Solució)
 ### 1. Modificar l'exportació del directori /srv/nfs/admin_tools per incloure l'opció 'no_root_squash'.
 Per començar hem de editar l'arxiu exports de la manera en que la línia que vam afegir fiquem *no_root_squash* més la segona línia i fem *restart* un cop guardat.
+
 <img width="729" height="232" alt="image" src="https://github.com/user-attachments/assets/e52d43c3-4d94-4571-9d4c-5825e2d5070c" />
 
 ---
