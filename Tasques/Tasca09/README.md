@@ -356,7 +356,7 @@ Iniciem sessió amb admin01 per probar de crear un arxiu dins la carpeta i veure
 
 <img width="595" height="49" alt="image" src="https://github.com/user-attachments/assets/1ac70d46-ac56-4cf9-b03b-0afe301f482a" />
 
-## Fase 4: L'Exportació de Desenvolupament (Permisos rw vs ro)
+## Fase 5: L'Exportació de Desenvolupament (Permisos rw vs ro)
 És evident que els usuaris no poden estar muntant manualment els recursos compartits cada vegada que reinicien el sistema. Per això, es configurarà el muntatge automàtic mitjançant el fitxer /etc/fstab al client.
 
 ### 1. Editar el fitxer /etc/fstab al client per afegir les entrades necessàries per muntar automàticament els recursos compartits NFS al directori /mnt/admin_tools i /mnt/dev_projects durant l'inici del sistema.
