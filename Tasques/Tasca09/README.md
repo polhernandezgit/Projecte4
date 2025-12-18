@@ -354,5 +354,37 @@ Tornem a entrar a la configuració de la xarxa i canviem la ip de manera que est
 ### 4. Canvieu d'usuari al client a admin01 i torneu a provar d'escriure al directori muntat. Comproveu que no es pot escriure, ja que admin01 no és membre del grup devs (permisos locals del sistema de fitxers).
 Iniciem sessió amb admin01 per probar de crear un arxiu dins la carpeta i veure que no ens deixa.
 
+<img width="595" height="49" alt="image" src="https://github.com/user-attachments/assets/1ac70d46-ac56-4cf9-b03b-0afe301f482a" />
+
+## Fase 4: L'Exportació de Desenvolupament (Permisos rw vs ro)
+És evident que els usuaris no poden estar muntant manualment els recursos compartits cada vegada que reinicien el sistema. Per això, es configurarà el muntatge automàtic mitjançant el fitxer /etc/fstab al client.
+
+### 1. Editar el fitxer /etc/fstab al client per afegir les entrades necessàries per muntar automàticament els recursos compartits NFS al directori /mnt/admin_tools i /mnt/dev_projects durant l'inici del sistema.
+
+Entrem a l'arxiu /etc/fstab i afegim les dos ultime línies de abaix de tot.
+
+<img width="636" height="315" alt="image" src="https://github.com/user-attachments/assets/b21f9740-c90f-49b1-b572-0bbf561cc9e6" />
+
+### 2. Executar la comanda mount -a per provar les entrades sense reiniciar.
+Ara fem la comanda mount -a perquè s'apliquin els canvis i es torni a muntar tot.
+```
+sudo mount -a
+```
+<img width="636" height="87" alt="image" src="https://github.com/user-attachments/assets/663e6ca5-1aae-41b4-ad30-553381c31ba1" />
+
+### 3. Reiniciar el client i verificar que els recursos compartits s'han muntat correctament.
+Primer mirem que els recursos compartits estan ben creats.
+
+<img width="436" height="126" alt="image" src="https://github.com/user-attachments/assets/32e74ef5-35de-4ac1-8984-028e8935ff80" />
+
+## Conclusió
+Aquesta pràctica ha permès entendre el funcionament bàsic del servei NFS i com compartir recursos entre un servidor i un client Linux de manera controlada. S’ha comprovat la importància de la gestió correcta d’usuaris, grups i permisos, així com l’impacte de les opcions d’exportació com root_squash i no_root_squash. També s’ha vist que NFS és una eina flexible i potent, però que requereix una configuració acurada per evitar problemes de seguretat i de manteniment en entorns amb molts equips.
+
+En conclusió penso que el NFS s'ha d'utilitzar de forma que sapiguis bé el que estas fent per poder gestionar be tots els arxiu, carpetes, permisos, etc.
+
+
+
+
+
 
 
